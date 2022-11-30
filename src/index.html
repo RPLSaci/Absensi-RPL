@@ -38,9 +38,17 @@
                 <ul
                     class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                     <li>
-                        <a href="./index.html"
-                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
-                            aria-current="page">Home</a>
+                        <a href="https://rplsaci.github.io/"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                    </li>
+                    <li>
+                        <a href="https://rplsaci.github.io/About/"
+                            class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                            aria-current="page">About</a>
+                    </li>
+                    <li>
+                        <a href="https://rplsaci.github.io/Absensi-RPL/"
+                            class="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white">Absensi</a>
                     </li>
                 </ul>
             </div>
@@ -48,15 +56,16 @@
     </nav>
     <div class="content flex items-center justify-center" style="height: 80vh;">
         <div class="mx-auto text-center">
-            <input id="namaAbsen" type="text" placeholder="Nama" class="mt-4 input input-bordered input-md w-full max-w-xs" />
+            <input id="namaAbsen" type="text" placeholder="Nama"
+                class="mt-4 input input-bordered input-md w-full max-w-xs" />
             <div class="form-control absensi mt-4">
                 <label class="input-group input-group-md place-content-center">
-                  <select id="kelas">
-                    <option>X</option>
-                    <option>XI</option>
-                    <option>XII</option>
-                  </select>
-                  <input type="text" id="kelasStr" placeholder="Kelas" class="input input-bordered input-lg" />
+                    <select id="kelas">
+                        <option>X</option>
+                        <option>XI</option>
+                        <option>XII</option>
+                    </select>
+                    <input type="text" id="kelasStr" placeholder="Kelas" class="input input-bordered input-lg" />
                 </label>
             </div>
             <select id="status" class="select mt-4 select-primary w-full max-w-xs">
@@ -64,7 +73,8 @@
                 <option>Izin</option>
                 <option>Sakit</option>
             </select>
-            <input id="alasan" type="text" placeholder="Alasan (Jika Ada)" class="input mt-4 input-bordered input-md w-full max-w-xs" />
+            <input id="alasan" type="text" placeholder="Alasan (Jika Ada)"
+                class="input mt-4 input-bordered input-md w-full max-w-xs" />
             <br>
             <button onclick="absen()" class="btn btn-wide">Absen</button>
         </div>
