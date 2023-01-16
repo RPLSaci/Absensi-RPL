@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <script src="./assets/js/index.js" defer></script>
+    <script src="./assets/js/absen.js" defer></script>
     <title>Ekstrakulikuler RPL SMAN 1 CIKAMPEK</title>
     <link rel="shortcut icon" href="./assets/img/logo.png" type="image/x-icon">
 </head>
@@ -19,8 +19,9 @@
                 <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">RPLCi</span>
             </a>
             <div class="flex md:order-2">
-                <a href="./login.html" type="button"
-                    class="text-white bg-slate-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login Manager</a>
+                <a id="reg" type="button"
+                    class="text-white bg-slate-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Register
+                    Now (On Discord)</a>
                 <button onclick="getNav()" data-collapse-toggle="navbar-cta" type="button"
                     class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-cta" aria-expanded="false">
@@ -54,29 +55,20 @@
         </div>
     </nav>
     <div class="content flex items-center justify-center" style="height: 80vh;">
-        <div class="mx-auto text-center">
-            <input id="namaAbsen" type="text" placeholder="Nama"
-                class="mt-4 input input-bordered input-md w-full max-w-xs" />
-            <div class="form-control absensi mt-4">
-                <label class="input-group input-group-md place-content-center">
-                    <select id="kelas">
-                        <option>X</option>
-                        <option>XI</option>
-                        <option>XII</option>
-                    </select>
-                    <input type="text" id="kelasStr" placeholder="Kelas" class="input input-bordered input-lg" />
-                </label>
-            </div>
-            <select id="status" class="select mt-4 select-primary w-full max-w-xs">
-                <option>Masuk</option>
-                <option>Izin</option>
-                <option>Sakit</option>
-            </select>
-            <input id="alasan" type="text" placeholder="Alasan (Jika Ada)"
-                class="input mt-4 input-bordered input-md w-full max-w-xs" />
-            <br>
-            <button onclick="absen()" class="btn btn-wide">Absen</button>
-        </div>
+        <div class="w-full overflow-x-auto mx-auto">
+            <table id="absen-table" class="mx-auto text-gray-700 bg-white sm:table-auto">
+              <thead class="text-left font-medium bg-gray-200">
+                <tr>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Nama</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Kelas</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Status</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Alasan</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Waktu</th>
+                  <th class="px-4 py-2 sm:text-center sm:px-2 sm:py-1">Delete</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
     </div>
     <footer class="inset-x-0 bottom-0 p-2 bg-white sm:p-6 dark:bg-gray-900">
         <div class="md:flex md:justify-between">

@@ -7,3 +7,16 @@
 .absensi#kelas {
     width: 50px
 }
+
+@media (max-width: 768px) {
+    /* styles for screens smaller than 768px */
+    #absen-table th {
+        font-size: 0.8em;
+    }
+    #absen-table td {
+        font-size: 0.8em;
+    }
+    #absen-table th, #absen-table td {
+        padding: 4px 8px;
+    }
+}
