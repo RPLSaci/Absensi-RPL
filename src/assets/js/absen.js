@@ -52,7 +52,7 @@ async function loadData() {
             <tbody>
         <tr class="bg-white">
             <td class="px-4 py-2">${json[i].nama}</td>
-            <td class="px-4 py-2">${json[i].kelas}${json[i].kelasStr.toUpperCase()}</td>
+            <td class="px-4 py-2">${json[i].kelas}${json[i].kelasStr.toUpperCase().replace("X","").replace("-","").replace(" ","")}</td>
             <td class="px-4 py-2">${json[i].status}</td>
             <td class="px-4 py-2">${json[i].alasan}</td>
             <td class="px-4 py-2">${(new Date(json[i].time)).toLocaleString()}</td>
