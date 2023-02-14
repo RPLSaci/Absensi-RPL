@@ -70,6 +70,8 @@ async function loadData() {
 }
 
 async function deleteId(e){
+    let confirmation = confirm("Yakin kah ?")
+    if(!confirmation) return
     let id = e.getAttribute("data-id")
 
     let token = localStorage.getItem("token")
@@ -87,4 +89,8 @@ async function deleteId(e){
         alert(data.message)
     }
 
+}
+
+if(document.getElementById("excel")){
+    document.getElementById("excel").setAttribute("href",api+"api/export")
 }
